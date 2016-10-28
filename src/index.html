@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="Hand Gesture Control">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="content">
+            <div class="instructions">
+                <h1 align="center" style="margin-bottom: 0;">Youtube Gesture Control Demo</h1>
+                <p align="center">This is a simple demo web page that uses hand gestures to control the youtube video below.</p>
+                <h3>Instructions:</h3>
+                <ul>
+                    <li>Grant permission for the web page to use the web camera. Try using newer versions of chrome or firefox</li>
+                    <li>To play/pause the video, make a hand gesture of closed fist in front of the camera</li>
+                    <li>To reset any settings, just refresh the page</li>
+                </ul>
+
+                <!-- Realtime display from the web camera -->
+                <video id="webcamVideo" class="overlay" height="100" width="100"/>
+            </div>
+
+            <!-- section for error messages -->
+            <div id="messages" class="error" hidden="true">
+                <h3>One of the following errors occurred:</h3>
+                <ul>
+                    <li>Browser does not support using webcamera. Try new versions of chrome or firefox</li>
+                    <li>Permission to use webcaamera is denied</li>
+                </ul>
+            </div>
+
+            <!-- Frame with video -->
+            <iframe id="youtubeVideo" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/9bZkp7q19f0?enablejsapi=1"
+                    frameborder="0"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
